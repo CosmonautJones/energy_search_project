@@ -1,0 +1,33 @@
+.App {
+}
+
+.App-logo {
+  text-align: center;
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  text-align: center;
+  opacity: 0.9;
+  background-color: rgb(67, 125, 164);
+  height: 150px;
+  padding: 20px;
+  color: rgb(129, 232, 113);
+}
+
+.App-title {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.Welcome {
+  text-align: center;
+  color: rgb(0, 140, 247);
+  font-size: 2em;
+}
+
+.Zip {
+  text-align: center;
+  color: rgb(0, 129, 235);
+}
