@@ -15,6 +15,13 @@
   padding: 20px;
   color: rgb(129, 232, 113);
 }
+.header-image {
+
+}
+.ZipLink {
+  text-align: center;
+  text-decoration: none;
+}
 
 .App-title {
   text-align: center;
@@ -23,11 +30,16 @@
 
 .Welcome {
   text-align: center;
-  color: rgb(0, 140, 247);
+  color: rgb(0, 0, 0);
   font-size: 2em;
 }
 
 .Zip {
   text-align: center;
-  color: rgb(0, 129, 235);
+  color: rgb(0, 0, 0);
+}
+
+.Login {
+  display: inline-block;
+  text-align: center;
 }

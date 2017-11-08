@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
+
 import './App.css';
 import './Pictures/greenBulb.png';
-import ZipForm from './form/ZipForm.js';
+
+import ZipForm from './components/ZipForm.js';
+import LoginForm from './components/LoginForm.js';
 
 
 class App extends Component {
@@ -9,20 +13,18 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={require('/Users/Travis/Documents/Coding/LAMBDA/energy_search_project/src/Pictures/greenBulb.png')} className="App-logo" alt="logo" />
+          <img className="header-image" src={require('./Pictures/greenBulb.png')} className="App-logo" alt="logo" />
+          <h3 className="Login">
+            Login Here:
+            <LoginForm />
+          </h3>
+          <img className="header-image2" src={require('./Pictures/greenBulb.png')} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to EnerTree</h1>
         </header>
-        <nav>
-            <ul>
-              <li>Plans</li>
-            </ul> 
-          </nav>
         <p className="Welcome">
-          This application will help guide you to a cost-effective energy plan.
+          Guiding you to a more cost-effective energy plan.
         </p>
-        <h3 className="Zip">
-          <ZipForm />
-        </h3>
+        <Link className="ZipLink" to="/zipform">Enter Zip Here</Link>
       </div>
     );
   }
