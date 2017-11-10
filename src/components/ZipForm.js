@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import '../css_components/ZipForm.css';
 
 class ZipForm extends Component {
   constructor(props) {
@@ -23,7 +25,7 @@ class ZipForm extends Component {
   render() {
 
     return (
-      <div className = "ZipSearch">
+      <div className = "ZipForm">
         <form onSubmit={this.handleSubmit}>
           <label>
             Enter Zip Code Here: <br />
@@ -35,6 +37,7 @@ class ZipForm extends Component {
               ref={this.state.zip}/> <br />
           <button onClick={this.handleSubmit}>Submit</button>
         </form>
+        <Link className="Link" to="/">Home</Link>
       </div>
     );
   }

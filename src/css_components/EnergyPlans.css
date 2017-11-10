@@ -1,0 +1,29 @@
+.PlanPage {
+  text-align: center;
+}
+
+.PlanList {
+  display: block;
+  border: solid;
+  padding: 20px;
+  margin: 20px;
+  opacity: 0.9;
+  background-color: rgb(67, 125, 164);
+  color: rgb(129, 232, 113);
+}
+
+.Link {
+  display: flex;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+.PlanLayout {
+  border: solid;
+  color: black;
+}
+
+PlanText {
+  color: rgb(129, 232, 113);
+}

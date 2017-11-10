@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import "../App.css"
+import '../css_components/LoginForm.css';
 
 import { addUsername, addPassword } from '../actions/index.js';
 
@@ -50,6 +53,9 @@ render() {
     return (
         <div className="LoginForm">
             <form onSubmit={this.addUsername}>
+                <label>
+                    Login Here: <br />
+                </label> <br />
                 <input
                     onChange={this.updateNewUsername}
                     placeholder="Add Username"
@@ -66,6 +72,7 @@ render() {
                 />
             </form>
             <button onClick={this.updateNewUsername}>Submit</button>
+            <Link className="Link" to="/">Home</Link>
         </div>
         );
     }

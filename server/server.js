@@ -7,92 +7,57 @@ const app = express();
 app.use(bodyParser.json());
 app.use(CORS());
 
-const movies = [
+const plans = [
 	{
 		id: 0,
-		company: 'The Godfather',
-		location: 'Francis Ford Coppola',
-		rate: 100,
-		stars: ['Marlon Brando', 'Al Pacino', 'Robert Duvall'],
+		company: 'InfuseEnergy',
+		planDetail: 'Fixed Rate',
+		price: {
+			'2000kWh': '$0.10',
+			'1000kWh': '$0.35',
+			'500kWh': '$0.07'
+		},
+		contract: 12,
+		rating: 4
 	},
 	{
 		id: 1,
-		company: 'Star Wars',
-		location: 'George Lucas',
-		rate: 92,
-		stars: ['Mark Hamill', 'Harrison Ford', 'Carrie Fisher'],
+		company: 'Reliant',
+		planDetail: 'Indexed',
+		price: {
+			'2000kWh': '$0.09',
+			'1000kWh': '$0.07',
+			'500kWh': '$0.10'
+		},
+		contract: 6,
+		rating: 4
 	},
 	{
 		id: 2,
-		company: 'The Lord of the Rings: The Fellowship of the Ring',
-		location: 'Peter Jackson',
-		rate: 92,
-		stars: ['Elijah Wood', 'Ian McKellen', 'Orlando Bloom'],
-	},
+		company: 'TXU',
+		planDetail: 'Variable',
+		price: {
+			'2000kWh': '$0.09',
+			'1000kWh': '$0.08',
+			'500kWh': '$0.06'
+		},
+		contract: 36,
+		rating: 4.5
+	}
 ];
 
-app.get('/movies', (req, res) => {
-	res.send(movies);
+app.get('/plans', (req, res) => {
+	res.send(plans);
 });
 
-app.get('/movies/:id', (req, res) => {
-	const movie = movies.filter(movie => movie.id.toString() === req.params.id)[0];
-	res.send(movie);
+app.get('/plans/:id', (req, res) => {
+	const plan = plans.filter(plan => plan.id.toString() === req.params.id)[0];
+	res.send(plan);
 });
 
-app.post('/new-movie', (req, res) => {
-	if (req.body.id !== undefined) movies.push(req.body);
-	res.send(movies);
-});
-
-app.listen(5000, () => {
-	console.log('Server listening on port 5000');
-});
-const express = require('express');
-const bodyParser = require('body-parser');
-const CORS = require('cors');
-
-const app = express();
-
-app.use(bodyParser.json());
-app.use(CORS());
-
-const movies = [
-	{
-		id: 0,
-		title: 'The Godfather',
-		director: 'Francis Ford Coppola',
-		metascore: 100,
-		stars: ['Marlon Brando', 'Al Pacino', 'Robert Duvall'],
-	},
-	{
-		id: 1,
-		title: 'Star Wars',
-		director: 'George Lucas',
-		metascore: 92,
-		stars: ['Mark Hamill', 'Harrison Ford', 'Carrie Fisher'],
-	},
-	{
-		id: 2,
-		title: 'The Lord of the Rings: The Fellowship of the Ring',
-		director: 'Peter Jackson',
-		metascore: 92,
-		stars: ['Elijah Wood', 'Ian McKellen', 'Orlando Bloom'],
-	},
-];
-
-app.get('/movies', (req, res) => {
-	res.send(movies);
-});
-
-app.get('/movies/:id', (req, res) => {
-	const movie = movies.filter(movie => movie.id.toString() === req.params.id)[0];
-	res.send(movie);
-});
-
-app.post('/new-movie', (req, res) => {
-	if (req.body.id !== undefined) movies.push(req.body);
-	res.send(movies);
+app.post('/new-plans', (req, res) => {
+	if (req.body.id !== undefined) plan.push(req.body);
+	res.send(plans);
 });
 
 app.listen(5000, () => {

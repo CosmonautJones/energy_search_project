@@ -1,9 +1,8 @@
 .App {
+
 }
 
 .App-logo {
-  text-align: center;
-  animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
 
@@ -11,16 +10,9 @@
   text-align: center;
   opacity: 0.9;
   background-color: rgb(67, 125, 164);
-  height: 150px;
+  height: 170px;
   padding: 20px;
   color: rgb(129, 232, 113);
-}
-.header-image {
-
-}
-.ZipLink {
-  text-align: center;
-  text-decoration: none;
 }
 
 .App-title {
@@ -34,12 +26,32 @@
   font-size: 2em;
 }
 
-.Zip {
+.ZipLink {
   text-align: center;
+  opacity: 0.9;
+  background-color: rgb(67, 125, 164);
+  height: 10px;
+  width: 100px;
+  padding: 20px;
   color: rgb(0, 0, 0);
 }
 
 .Login {
-  display: inline-block;
   text-align: center;
+  opacity: 0.9;
+  background-color: rgb(67, 125, 164);
+  height: 10px;
+  width: 100px;
+  padding: 20px;
+  color: rgb(0, 0, 0);
+}
+
+.Plans {
+  text-align: center;
+  opacity: 0.9;
+  background-color: rgb(67, 125, 164);
+  height: 10px;
+  width: 100px;
+  padding: 20px;
+  color: rgb(0, 0, 0);
 }

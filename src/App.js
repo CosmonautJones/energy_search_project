@@ -14,17 +14,20 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img className="header-image" src={require('./Pictures/greenBulb.png')} className="App-logo" alt="logo" />
-          <h3 className="Login">
-            Login Here:
-            <LoginForm />
-          </h3>
-          <img className="header-image2" src={require('./Pictures/greenBulb.png')} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to EnerTree</h1>
+          <h1>Welcome to EnerTree</h1>
         </header>
         <p className="Welcome">
           Guiding you to a more cost-effective energy plan.
         </p>
-        <Link className="ZipLink" to="/zipform">Enter Zip Here</Link>
+        <p className="ZipLink">
+          <Link className="Link" to="/zipform">Enter Zip</Link>
+        </p>
+        <p className="Login">
+          <Link className="Link" to="/login"> Login</Link>
+        </p>
+        <p className="Plans">
+          <Link className="Link" to="/plans"> View Plans</Link>
+        </p>
       </div>
     );
   }

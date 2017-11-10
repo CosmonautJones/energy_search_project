@@ -1,0 +1,16 @@
+.LoginForm {
+  text-align: center;
+  position: flex;
+  padding: 50px;
+  opacity: 0.9;
+  background-color: rgb(67, 125, 164);
+  height: 150px;
+  color: rgb(129, 232, 113);
+}
+
+.Link {
+  text-align: center;
+  display: flex;
+  color: white;
+  text-decoration: none;
+}
