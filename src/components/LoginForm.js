@@ -72,6 +72,7 @@ render() {
                 />
             </form>
             <button onClick={this.updateNewUsername}>Submit</button>
+            <button onClick={this.updateNewPassword}>Submit</button>
             <Link className="Link" to="/">Home</Link>
         </div>
         );

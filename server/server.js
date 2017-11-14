@@ -18,10 +18,46 @@ const plans = [
 			'500kWh': '$0.07'
 		},
 		contract: 12,
-		rating: 4
+		rating: 4.5
 	},
 	{
 		id: 1,
+		company: 'ValueEnergy',
+		planDetail: 'Indexed',
+		price: [
+			'2000kWh = $0.19',
+			'1000kWh = $0.17',
+			'500kWh = $0.10'
+		],
+		contract: 6,
+		rating: 4
+	},
+	{
+		id: 2,
+		company: 'SolarCity',
+		planDetail: 'Variable',
+		price: {
+			'2000kWh': 'Free',
+			'1000kWh': 'Free',
+			'500kWh': 'Free'
+		},
+		contract: 1000,
+		rating: 5
+	},
+	{
+		id: 3,
+		company: 'InfuseEnergy',
+		planDetail: 'Fixed Rate',
+		price: {
+			'2000kWh': '$0.10',
+			'1000kWh': '$0.35',
+			'500kWh': '$0.07'
+		},
+		contract: 12,
+		rating: 4
+	},
+	{
+		id: 4,
 		company: 'Reliant',
 		planDetail: 'Indexed',
 		price: {
@@ -33,7 +69,7 @@ const plans = [
 		rating: 4
 	},
 	{
-		id: 2,
+		id: 5,
 		company: 'TXU',
 		planDetail: 'Variable',
 		price: {

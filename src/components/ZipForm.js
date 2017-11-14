@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import '../css_components/ZipForm.css';
+
+import { addZipCode } from '../actions/index.js';
 
 class ZipForm extends Component {
   constructor(props) {
@@ -9,32 +12,42 @@ class ZipForm extends Component {
     this.state = { 
       zip: ''
     };
-    this.handleChange = this.handleChange.bind(this);
+
+    this.addZipCode = this.addZipCode.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+
   }
 
-  handleChange(event) {
-    this.setState({ zip: event.target.value });
+  addZipCode(event) {
+    event.preventDefault();
+    this.props.addZipCode({
+      value: this.state.zip,
+    });
+    this.setState({ 
+      zip: ''
+    });
   }
 
   handleSubmit(event) {
-    event.preventDefault();
     console.log(this.state.zip);
+      this.setState({
+        zip: event.target.value
+      });
   }
 
   render() {
 
     return (
       <div className = "ZipForm">
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.addZipCode}>
           <label>
             Enter Zip Code Here: <br />
           </label> <br />
           <input 
-              type="text" name="Zip Code" value={this.state.value} 
-              onChange={this.handleChange} 
+              onChange={this.handleSubmit} 
+              type="text" name="Zip Code"
               placeholder="Enter Zip" 
-              ref={this.state.zip}/> <br />
+              value={this.state.zip}/> <br />
           <button onClick={this.handleSubmit}>Submit</button>
         </form>
         <Link className="Link" to="/">Home</Link>
@@ -45,4 +58,4 @@ class ZipForm extends Component {
 
 
 
-export default ZipForm;
+export default connect (null, { addZipCode }) (ZipForm);

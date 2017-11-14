@@ -9,17 +9,18 @@ class EnergyPlans extends Component {
     render() {
         return(
             <div className="PlanPage">
-                <h1> List of Energy Plans </h1>
+                <h1 className="PlanPage--title"> Shop. Compare. Choose. </h1>
                 <p className ="PlanList">
-                {this.props.plans.map((plan, i) => {
-                    return (
-                        <Plan key={i} 
+                    {this.props.plans.map((plan, i) => {
+                        return (
+                            <Plan
+                                key={i} 
                                 index={i} 
                                 plan={plan} 
-                        />
-                    );
-                })}
-            </p>
+                            />
+                        );
+                    })}
+                </p>
               <Link className="Link" to="/">Home</Link>
             </div>
         );

@@ -1,9 +1,11 @@
 .PlanPage {
   text-align: center;
+  display: block;
 }
 
 .PlanList {
   display: block;
+  font-family: 'Patua One', cursive;
   border: solid;
   padding: 20px;
   margin: 20px;
@@ -13,17 +15,25 @@
 }
 
 .Link {
-  display: flex;
   color: white;
   text-align: center;
   text-decoration: none;
 }
 
 .PlanLayout {
-  border: solid;
-  color: black;
+  border: solid black;
+  margin: 10px;
+  color: rgb(0, 0, 0);
 }
 
-PlanText {
-  color: rgb(129, 232, 113);
+.PlanPage--title {
+  color: #111; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+  font-size: 60px; 
+  font-weight: bold; 
+  letter-spacing: -1px; line-height: 1; 
+  text-align: center;
+}
+
+.selected-plan {
+  margin: 10px;
 }
