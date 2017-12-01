@@ -29,7 +29,8 @@ class ZipForm extends Component {
   }
 
   handleSubmit(event) {
-    console.log(this.state.zip);
+    event.preventDefault();
+    console.log("handleSubmit: ", this.state.zip);
       this.setState({
         zip: event.target.value
       });

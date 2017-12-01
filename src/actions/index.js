@@ -4,7 +4,7 @@ export const GET_PLANS = 'GET_PLANS';
 export const GET_SPECIFIC_PLAN = 'GET_SPECIFIC_PLAN';
 
 export const getPlans = () => {
-    const energyPlans = 'http://localhost:5000/plans';
+    const energyPlans = 'http://localhost:5000/plansData';
     const getPlansPromise = axios.get(energyPlans);
 
     console.log('get plans action creator fired!..');

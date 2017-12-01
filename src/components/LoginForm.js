@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
+
 import "../App.css"
 import '../css_components/LoginForm.css';
 
@@ -73,7 +75,9 @@ render() {
             </form>
             <button onClick={this.updateNewUsername}>Submit</button>
             <button onClick={this.updateNewPassword}>Submit</button>
-            <Link className="Link" to="/">Home</Link>
+        <p>
+        <Button><Link className="Link" to="/">Home</Link></Button>
+        </p>
         </div>
         );
     }

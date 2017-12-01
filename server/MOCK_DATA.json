@@ -1,0 +1,402 @@
+[
+	{
+		"id": 1,
+		"company": "Photojam",
+		"fixedRate": false,
+		"price": { "2000kWh": 0.36, "1000kWh": 0.18, "500kWh": 0.05 },
+		"contract": 24,
+		"rating": 6
+	},
+	{
+		"id": 2,
+		"company": "Oloo",
+		"fixedRate": true,
+		"price": { "2000kWh": 0.44, "1000kWh": 0.11, "500kWh": 0.04 },
+		"contract": 9,
+		"rating": 2
+	},
+	{
+		"id": 3,
+		"company": "Fiveclub",
+		"fixedRate": false,
+		"price": { "2000kWh": 0.44, "1000kWh": 0.14, "500kWh": 0.05 },
+		"contract": 6,
+		"rating": 5
+	},
+	{
+		"id": 4,
+		"company": "Edgeify",
+		"fixedRate": true,
+		"price": { "2000kWh": 0.43, "1000kWh": 0.15, "500kWh": 0.05 },
+		"contract": 31,
+		"rating": 10
+	},
+	{
+		"id": 5,
+		"company": "Einti",
+		"fixedRate": true,
+		"price": { "2000kWh": 0.43, "1000kWh": 0.18, "500kWh": 0.05 },
+		"contract": 12,
+		"rating": 5
+	},
+	{
+		"id": 6,
+		"company": "Mybuzz",
+		"fixedRate": false,
+		"price": { "2000kWh": 0.36, "1000kWh": 0.16, "500kWh": 0.06 },
+		"contract": 30,
+		"rating": 1
+	},
+	{
+		"id": 7,
+		"company": "Meevee",
+		"fixedRate": false,
+		"price": { "2000kWh": 0.28, "1000kWh": 0.14, "500kWh": 0.08 },
+		"contract": 17,
+		"rating": 4
+	},
+	{
+		"id": 8,
+		"company": "Trilia",
+		"fixedRate": true,
+		"price": { "2000kWh": 0.37, "1000kWh": 0.16, "500kWh": 0.05 },
+		"contract": 17,
+		"rating": 5
+	},
+	{
+		"id": 9,
+		"company": "Riffwire",
+		"fixedRate": true,
+		"price": { "2000kWh": 0.26, "1000kWh": 0.15, "500kWh": 0.08 },
+		"contract": 7,
+		"rating": 8
+	},
+	{
+		"id": 10,
+		"company": "Yabox",
+		"fixedRate": true,
+		"price": { "2000kWh": 0.43, "1000kWh": 0.17, "500kWh": 0.05 },
+		"contract": 8,
+		"rating": 4
+	},
+	{
+		"id": 11,
+		"company": "Ooba",
+		"fixedRate": false,
+		"price": { "2000kWh": 0.31, "1000kWh": 0.13, "500kWh": 0.05 },
+		"contract": 20,
+		"rating": 5
+	},
+	{
+		"id": 12,
+		"company": "Skyvu",
+		"fixedRate": true,
+		"price": { "2000kWh": 0.24, "1000kWh": 0.16, "500kWh": 0.05 },
+		"contract": 7,
+		"rating": 8
+	},
+	{
+		"id": 13,
+		"company": "Twiyo",
+		"fixedRate": true,
+		"price": { "2000kWh": 0.41, "1000kWh": 0.13, "500kWh": 0.08 },
+		"contract": 31,
+		"rating": 8
+	},
+	{
+		"id": 14,
+		"company": "Thoughtbeat",
+		"fixedRate": true,
+		"price": { "2000kWh": 0.25, "1000kWh": 0.16, "500kWh": 0.08 },
+		"contract": 30,
+		"rating": 10
+	},
+	{
+		"id": 15,
+		"company": "Yambee",
+		"fixedRate": true,
+		"price": { "2000kWh": 0.39, "1000kWh": 0.12, "500kWh": 0.04 },
+		"contract": 11,
+		"rating": 8
+	},
+	{
+		"id": 16,
+		"company": "Avavee",
+		"fixedRate": false,
+		"price": { "2000kWh": 0.46, "1000kWh": 0.16, "500kWh": 0.06 },
+		"contract": 15,
+		"rating": 5
+	},
+	{
+		"id": 17,
+		"company": "Babbleset",
+		"fixedRate": true,
+		"price": { "2000kWh": 0.29, "1000kWh": 0.18, "500kWh": 0.05 },
+		"contract": 17,
+		"rating": 4
+	},
+	{
+		"id": 18,
+		"company": "Gigashots",
+		"fixedRate": true,
+		"price": { "2000kWh": 0.39, "1000kWh": 0.11, "500kWh": 0.06 },
+		"contract": 29,
+		"rating": 6
+	},
+	{
+		"id": 19,
+		"company": "Dynazzy",
+		"fixedRate": false,
+		"price": { "2000kWh": 0.27, "1000kWh": 0.12, "500kWh": 0.05 },
+		"contract": 11,
+		"rating": 1
+	},
+	{
+		"id": 20,
+		"company": "Wikizz",
+		"fixedRate": true,
+		"price": { "2000kWh": 0.39, "1000kWh": 0.14, "500kWh": 0.05 },
+		"contract": 13,
+		"rating": 7
+	},
+	{
+		"id": 21,
+		"company": "Wikivu",
+		"fixedRate": false,
+		"price": { "2000kWh": 0.25, "1000kWh": 0.14, "500kWh": 0.07 },
+		"contract": 27,
+		"rating": 1
+	},
+	{
+		"id": 22,
+		"company": "Feedspan",
+		"fixedRate": false,
+		"price": { "2000kWh": 0.31, "1000kWh": 0.11, "500kWh": 0.04 },
+		"contract": 32,
+		"rating": 1
+	},
+	{
+		"id": 23,
+		"company": "Wordtune",
+		"fixedRate": false,
+		"price": { "2000kWh": 0.28, "1000kWh": 0.11, "500kWh": 0.07 },
+		"contract": 28,
+		"rating": 9
+	},
+	{
+		"id": 24,
+		"company": "Latz",
+		"fixedRate": true,
+		"price": { "2000kWh": 0.33, "1000kWh": 0.11, "500kWh": 0.07 },
+		"contract": 28,
+		"rating": 5
+	},
+	{
+		"id": 25,
+		"company": "Zazio",
+		"fixedRate": true,
+		"price": { "2000kWh": 0.37, "1000kWh": 0.11, "500kWh": 0.05 },
+		"contract": 11,
+		"rating": 5
+	},
+	{
+		"id": 26,
+		"company": "Voolith",
+		"fixedRate": false,
+		"price": { "2000kWh": 0.29, "1000kWh": 0.16, "500kWh": 0.08 },
+		"contract": 6,
+		"rating": 9
+	},
+	{
+		"id": 27,
+		"company": "Kanoodle",
+		"fixedRate": false,
+		"price": { "2000kWh": 0.37, "1000kWh": 0.19, "500kWh": 0.07 },
+		"contract": 21,
+		"rating": 7
+	},
+	{
+		"id": 28,
+		"company": "Dablist",
+		"fixedRate": false,
+		"price": { "2000kWh": 0.49, "1000kWh": 0.19, "500kWh": 0.07 },
+		"contract": 29,
+		"rating": 5
+	},
+	{
+		"id": 29,
+		"company": "Browsecat",
+		"fixedRate": true,
+		"price": { "2000kWh": 0.43, "1000kWh": 0.09, "500kWh": 0.06 },
+		"contract": 25,
+		"rating": 10
+	},
+	{
+		"id": 30,
+		"company": "Aimbo",
+		"fixedRate": false,
+		"price": { "2000kWh": 0.33, "1000kWh": 0.19, "500kWh": 0.04 },
+		"contract": 25,
+		"rating": 10
+	},
+	{
+		"id": 31,
+		"company": "Realfire",
+		"fixedRate": false,
+		"price": { "2000kWh": 0.24, "1000kWh": 0.11, "500kWh": 0.06 },
+		"contract": 30,
+		"rating": 1
+	},
+	{
+		"id": 32,
+		"company": "Zoombox",
+		"fixedRate": false,
+		"price": { "2000kWh": 0.47, "1000kWh": 0.12, "500kWh": 0.07 },
+		"contract": 6,
+		"rating": 1
+	},
+	{
+		"id": 33,
+		"company": "Gabcube",
+		"fixedRate": false,
+		"price": { "2000kWh": 0.27, "1000kWh": 0.16, "500kWh": 0.06 },
+		"contract": 12,
+		"rating": 1
+	},
+	{
+		"id": 34,
+		"company": "Zoozzy",
+		"fixedRate": false,
+		"price": { "2000kWh": 0.48, "1000kWh": 0.19, "500kWh": 0.07 },
+		"contract": 6,
+		"rating": 4
+	},
+	{
+		"id": 35,
+		"company": "Fadeo",
+		"fixedRate": true,
+		"price": { "2000kWh": 0.48, "1000kWh": 0.14, "500kWh": 0.04 },
+		"contract": 36,
+		"rating": 4
+	},
+	{
+		"id": 36,
+		"company": "Ntags",
+		"fixedRate": false,
+		"price": { "2000kWh": 0.23, "1000kWh": 0.1, "500kWh": 0.07 },
+		"contract": 22,
+		"rating": 8
+	},
+	{
+		"id": 37,
+		"company": "Brainverse",
+		"fixedRate": false,
+		"price": { "2000kWh": 0.27, "1000kWh": 0.12, "500kWh": 0.06 },
+		"contract": 25,
+		"rating": 10
+	},
+	{
+		"id": 38,
+		"company": "Oyonder",
+		"fixedRate": true,
+		"price": { "2000kWh": 0.29, "1000kWh": 0.19, "500kWh": 0.08 },
+		"contract": 36,
+		"rating": 3
+	},
+	{
+		"id": 39,
+		"company": "Vinte",
+		"fixedRate": false,
+		"price": { "2000kWh": 0.28, "1000kWh": 0.12, "500kWh": 0.07 },
+		"contract": 7,
+		"rating": 8
+	},
+	{
+		"id": 40,
+		"company": "Oyoloo",
+		"fixedRate": false,
+		"price": { "2000kWh": 0.39, "1000kWh": 0.13, "500kWh": 0.05 },
+		"contract": 7,
+		"rating": 5
+	},
+	{
+		"id": 41,
+		"company": "Centidel",
+		"fixedRate": false,
+		"price": { "2000kWh": 0.26, "1000kWh": 0.19, "500kWh": 0.07 },
+		"contract": 33,
+		"rating": 5
+	},
+	{
+		"id": 42,
+		"company": "Flashpoint",
+		"fixedRate": true,
+		"price": { "2000kWh": 0.36, "1000kWh": 0.14, "500kWh": 0.06 },
+		"contract": 11,
+		"rating": 7
+	},
+	{
+		"id": 43,
+		"company": "Eabox",
+		"fixedRate": false,
+		"price": { "2000kWh": 0.29, "1000kWh": 0.17, "500kWh": 0.07 },
+		"contract": 15,
+		"rating": 7
+	},
+	{
+		"id": 44,
+		"company": "Voolia",
+		"fixedRate": true,
+		"price": { "2000kWh": 0.23, "1000kWh": 0.11, "500kWh": 0.07 },
+		"contract": 30,
+		"rating": 2
+	},
+	{
+		"id": 45,
+		"company": "Vidoo",
+		"fixedRate": false,
+		"price": { "2000kWh": 0.46, "1000kWh": 0.14, "500kWh": 0.07 },
+		"contract": 13,
+		"rating": 7
+	},
+	{
+		"id": 46,
+		"company": "Gigazoom",
+		"fixedRate": false,
+		"price": { "2000kWh": 0.4, "1000kWh": 0.13, "500kWh": 0.04 },
+		"contract": 28,
+		"rating": 2
+	},
+	{
+		"id": 47,
+		"company": "Feedbug",
+		"fixedRate": false,
+		"price": { "2000kWh": 0.38, "1000kWh": 0.17, "500kWh": 0.08 },
+		"contract": 28,
+		"rating": 10
+	},
+	{
+		"id": 48,
+		"company": "Divavu",
+		"fixedRate": true,
+		"price": { "2000kWh": 0.35, "1000kWh": 0.14, "500kWh": 0.06 },
+		"contract": 28,
+		"rating": 7
+	},
+	{
+		"id": 49,
+		"company": "Skidoo",
+		"fixedRate": true,
+		"price": { "2000kWh": 0.25, "1000kWh": 0.16, "500kWh": 0.06 },
+		"contract": 35,
+		"rating": 1
+	},
+	{
+		"id": 50,
+		"company": "Voonte",
+		"fixedRate": false,
+		"price": { "2000kWh": 0.26, "1000kWh": 0.12, "500kWh": 0.08 },
+		"contract": 20,
+		"rating": 5
+	}
+]

@@ -26,32 +26,7 @@
   font-size: 2em;
 }
 
-.ZipLink {
-  text-align: center;
-  opacity: 0.9;
+.Button {
   background-color: rgb(67, 125, 164);
-  height: 10px;
-  width: 100px;
-  padding: 20px;
-  color: rgb(0, 0, 0);
-}
-
-.Login {
-  text-align: center;
-  opacity: 0.9;
-  background-color: rgb(67, 125, 164);
-  height: 10px;
-  width: 100px;
-  padding: 20px;
-  color: rgb(0, 0, 0);
-}
-
-.Plans {
-  text-align: center;
-  opacity: 0.9;
-  background-color: rgb(67, 125, 164);
-  height: 10px;
-  width: 100px;
-  padding: 20px;
-  color: rgb(0, 0, 0);
+  
 }

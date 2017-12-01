@@ -1,11 +1,34 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 const CORS = require('cors');
 
-const app = express();
+const Plan = require('./PlanModel.js');
+const User = require('./UserModel.js')
 
-app.use(bodyParser.json());
-app.use(CORS());
+const server = express();
+
+server.use(bodyParser.json());
+server.use(CORS());
+
+const corsOptions = {
+	"origin": "*",
+	"methods": "GET, HEAD, PUT, PATCH, POST, DELETE",
+	"preflightContinue": false,
+	"optionsSuccessStatus": 204
+};
+
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost/energyPlanUsers', { useMongoClient: true });
+
+server.use(bodyParser.urlencoded({extended: true}));
+server.use(bodyParser.json());
+
+server.use((req, res, next) => {
+	res.setHeader("Access-Control-Allow-Origin", "*");
+	res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+	next();
+});
 
 const plans = [
 	{
@@ -24,11 +47,11 @@ const plans = [
 		id: 1,
 		company: 'ValueEnergy',
 		planDetail: 'Indexed',
-		price: [
-			'2000kWh = $0.19',
-			'1000kWh = $0.17',
-			'500kWh = $0.10'
-		],
+		price: {
+			'2000kWh': '$0.19',
+			'1000kWh': '$0.17',
+			'500kWh': '$0.10'
+	},
 		contract: 6,
 		rating: 4
 	},
@@ -82,20 +105,37 @@ const plans = [
 	}
 ];
 
-app.get('/plans', (req, res) => {
+server.get('/plansData/', (req, res) => {
+	Plan.find({}, (err, plans) => {
+		if (err) {
+			res
+				.status(STATUS_SERVER_ERROR)
+				.json({ 'There was an error getting plans' :err });
+			return;
+		}
+		res.json(plans);
+	});
+});
+
+server.get('/plans', (req, res) => {
 	res.send(plans);
 });
 
-app.get('/plans/:id', (req, res) => {
+server.get('/plans/:id', (req, res) => {
 	const plan = plans.filter(plan => plan.id.toString() === req.params.id)[0];
 	res.send(plan);
 });
 
-app.post('/new-plans', (req, res) => {
+server.post('/new-plans', (req, res) => {
 	if (req.body.id !== undefined) plan.push(req.body);
 	res.send(plans);
 });
 
-app.listen(5000, () => {
-	console.log('Server listening on port 5000');
+const routes = require('./routes/routes.js');
+routes(server);
+
+const port = process.env.PORT || 5000;
+
+server.listen(port, () => {
+	console.log(`Server listening on port ${port}`);
 });

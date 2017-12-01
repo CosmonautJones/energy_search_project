@@ -6,8 +6,12 @@ const Plan = ({ plan, index }) => {
         <div className="PlanLayout">
             <h4><u>{`Plan ${index+1}`}</u></h4>
             <h4>{`Company: ${plan.company}`}</h4>
-            <p>{`Plan Details: ${plan.planDetail}`}</p>
-            <p>{`Price: ${plan.price}`}</p>
+            <p>{`Fixed Rate: ${plan.fixedRate}`}</p>
+            <p>
+                {`Price: 500kWh @ $${plan.price['500kWh']}`} <br/>
+                {`Price: 1000kWh @ $${plan.price['1000kWh']}`}<br/>
+                {`Price: 2000kWh @ $${plan.price['2000kWh']}`}
+            </p>
             <p>{`Contract: ${plan.contract} months`}</p>
             <p>{`Rating: ${plan.rating} stars`}</p>
             <input type="checkbox" id="plan" className="selected-plan" value="plan" />

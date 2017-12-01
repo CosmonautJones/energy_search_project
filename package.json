@@ -5,6 +5,8 @@
   "dependencies": {
     "axios": "^0.17.0",
     "bootstrap": "^3.3.7",
+    "mongoose": "^4.13.3",
+    "nodemon": "^1.12.1",
     "prop-types": "^15.6.0",
     "react": "^16.1.0",
     "react-bootstrap": "^0.31.5",
