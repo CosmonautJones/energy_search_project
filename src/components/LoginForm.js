@@ -2,85 +2,50 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
+import { Route }  from 'react-router-dom';
+
+import Login from './Login.js'
+import CreateAccount from './CreateAccount.js'
 
 import "../App.css"
 import '../css_components/LoginForm.css';
 
-import { addUsername, addPassword } from '../actions/index.js';
 
 class LoginForm extends Component {
-    constructor(props) {
-        super(props);
+    constructor(){
+        super();
         this.state = {
-            username: '',
-            password: ''
-        };
-        this.addUsername = this.addUsername.bind(this);
-        this.updateNewUsername = this.updateNewUsername.bind(this);
-        this.addPassword = this.addPassword.bind(this);
-        this.updateNewPassword = this.updateNewPassword.bind(this);
-    }
-
-addUsername(event) {
-    this.props.addUsername({
-        value: this.state.username,
-    });
-    this.setState({
-        username: ''
-    });
-}
-updateNewUsername(event) {
-    console.log(this.state.username);
-    this.setState({
-        username: event.target.value
-    });
-}
-
-addPassword(event) {
-    this.props.addPassword({
-        value: this.state.password,
-    });
-    this.setState({
-        password: ''
-    });
-}
-updateNewPassword(event) {
-    console.log(this.state.password); 
-    this.setState({
-        password: event.target.value
-    });
-}
-
-render() {
-    return (
-        <div className="LoginForm">
-            <form onSubmit={this.addUsername}>
-                <label>
-                    Login Here: <br />
-                </label> <br />
-                <input
-                    onChange={this.updateNewUsername}
-                    placeholder="Add Username"
-                    value={this.state.username}
-                    ref={this.state.username}
-                />
-            </form>
-            <form onSubmit={this.addPassword}>
-                <input
-                    onChange={this.updateNewPassword}
-                    placeholder="Add Password"
-                    value={this.state.password}
-                    ref={this.state.password}
-                />
-            </form>
-            <button onClick={this.updateNewUsername}>Submit</button>
-            <button onClick={this.updateNewPassword}>Submit</button>
-        <p>
-        <Button><Link className="Link" to="/">Home</Link></Button>
-        </p>
-        </div>
+          loggedIn: false,
+        }
+      }
+    
+      componentWillMount() {
+        if (localStorage.getItem('uuID')) {
+          this.setState({loggedIn: true});
+        } else {
+          this.setState({loggedIn: false});
+        }
+      }
+    
+      doLogout() {
+        localStorage.setItem('uuID', '');
+        window.location = '/login';
+      }
+    
+      render() {
+        const { loggedIn } = this.state;
+        return (
+          <div className="App">
+            <div className="App-header">
+              <h3>Welcome To The Login Page</h3>
+              {loggedIn ? <div className="Inline-button">
+                <button className="btn btn-primary btn-sm" 
+                  onClick={this.doLogout}>Logout</button>
+              </div> : null}
+            </div>
+          </div>
         );
+      }
     }
-}
 
-export default connect(null, { addUsername, addPassword })(LoginForm);
+export default LoginForm;

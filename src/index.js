@@ -9,6 +9,8 @@ import './index.css';
 import App from './App';
 import ZipForm from './components/ZipForm.js';
 import LoginForm from './components/LoginForm.js';
+import Login from './components/Login.js';
+import CreateAccount from './components/CreateAccount.js';
 import EnergyPlans from './components/EnergyPlans';
 import rootReducer from './reducers';
 
@@ -31,6 +33,8 @@ ReactDOM.render(
         <Route exact path="/zipform" component={ZipForm} />
 				<Route path="/login" component={LoginForm} />
         <Route path="/plans" component={EnergyPlans} />
+        <Route path="/login" component={Login} />
+        <Route path="/create-user" component={CreateAccount} />
       </div>
     </Router>
 	</Provider>,

@@ -24,8 +24,9 @@ export default class Login extends Component {
   loginWithUser(e) {
     e.preventDefault();
     const user = {username: this.state.userName, password: this.state.password};
-    axios.post('http://localhost:3000/login', user)
+    axios.post('http://localhost:5000/login', user)
       .then((data) => {
+        console.log('user success', data)
         localStorage.setItem('uuID', data.data._id);
         setTimeout(() => {
           window.location = '/';

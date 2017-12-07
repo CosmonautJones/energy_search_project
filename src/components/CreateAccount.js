@@ -4,7 +4,7 @@ import { FormControl, FormGroup } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import "../css_components/Login.css";
 
-export default class CreateAccount extends Component {
+class CreateAccount extends Component {
   constructor(){
     super();
     this.state = {
@@ -24,11 +24,11 @@ export default class CreateAccount extends Component {
   createUser(e) {
     e.preventDefault();
     const userToSave = {username: this.state.username, password: this.state.password};
-    axios.post('http://localhost:3000/new-user', userToSave)
+    axios.post('http://localhost:5000/new-user', userToSave)
       .then((data) => {
         localStorage.setItem('uuID', data.data._id);
         setTimeout(() => {
-          window.location = '/posts';
+          window.location = '/plans';
         }, 200);
       })
       .catch((err) => {
@@ -60,7 +60,7 @@ export default class CreateAccount extends Component {
               type="password" 
               value={this.state.password} 
             />
-          <Link to="/">Already a member? Login here.</Link>
+          <Link to="/login">Already a member? Login here.</Link>
           <br/>
           <button className="btn btn-default" onClick={this.createUser}>Create Account</button>
         </FormGroup>
@@ -68,3 +68,5 @@ export default class CreateAccount extends Component {
     )
   }
 }
+
+export default CreateAccount;
