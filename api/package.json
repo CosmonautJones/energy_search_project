@@ -18,10 +18,13 @@
   },
   "homepage": "https://github.com/SunJieMing/LS-Routing-Movies#readme",
   "dependencies": {
-    "body-parser": "^1.17.1",
+    "body-parser": "^1.18.2",
     "cors": "^2.8.3",
-    "express": "^4.15.2",
+    "express": "^4.16.2",
+    "knex": "^0.14.2",
     "mongoose": "^4.13.3",
-    "nodemon": "^1.12.1"
+    "mysql": "^2.15.0",
+    "nodemon": "^1.12.5",
+    "sqlite3": "^3.1.13"
   }
 }
