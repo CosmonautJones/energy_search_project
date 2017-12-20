@@ -1,4 +1,5 @@
-const User = require('../models/UserModel.js');
+const sqlite = require('sqlite3');
+const knex = require('../configuration/db.js');
 
 const getUsers = (req, res) => {
   User.find({}, (err, users) => {
@@ -13,16 +14,20 @@ const getUsers = (req, res) => {
 };
 
 const createUser = (req, res) => {
-  const {username, password} = req.body;
-  const newUser = {username, password};
-  const user = new User(newUser)
-  user.save((err, createdUser) => {
-    if (err) {
-      res.status(422);
-      res.send({'Error inserting into users: ': err.message});
-      return;
+  const {email, password} = req.body;
+  knex
+    .insert({ email, password })
+    .into('users')
+    .then((ids) => {
+      res.status(201).json({ id: ids });
+      console.log('user created!')
+    })
+    .catch((err) => {
+      if(err.code === 'SQLITE_CONSTRAINT') {
+        res.status(422).json({ error: 'input incorrect'})
+    } else {
+        res.status(500).json(err)
     }
-    res.json(createdUser);
   });
 };
 
@@ -42,5 +47,5 @@ const login = (req, res) => {
 module.exports = {
   createUser,
   login,
-  getUsers,
+  // getUsers,
 };

@@ -29,7 +29,7 @@ insert into MOCK_ENERGY_DATA (id, company, 500kWh, 1000kWh, 2000kWh, state, zip_
 insert into MOCK_ENERGY_DATA (id, company, 500kWh, 1000kWh, 2000kWh, state, zip_code, contract, rating) values (18, 'Mraz LLC', 0.04, 0.18, 0.36, 'CA', '91131', false, 8);
 insert into MOCK_ENERGY_DATA (id, company, 500kWh, 1000kWh, 2000kWh, state, zip_code, contract, rating) values (19, 'Kutch Group', 0.06, 0.17, 0.29, 'CA', '92717', false, 4);
 insert into MOCK_ENERGY_DATA (id, company, 500kWh, 1000kWh, 2000kWh, state, zip_code, contract, rating) values (20, 'Koepp-Crona', 0.09, 0.18, 0.24, 'NM', '87195', true, 8);
-insert into MOCK_ENERGY_DATA (id, company, 500kWh, 1000kWh, 2000kWh, state, zip_code, contract, rating) values (21, 'Wilkinson-Hilpert', 0.04, 0.11, 0.46, 'TX', '76129', true, 10);
+insert into MOCK_ENERGY_DATA (id, company, 500kWh, 1000kWh, 2000kWh, state, zip_code, contract, rating) values (21, 'Wilkinsonstr-Hilpert', 0.04, 0.11, 0.46, 'TX', '76129', true, 10);
 insert into MOCK_ENERGY_DATA (id, company, 500kWh, 1000kWh, 2000kWh, state, zip_code, contract, rating) values (22, 'Heathcote Group', 0.06, 0.17, 0.28, 'TX', '75392', true, 10);
 insert into MOCK_ENERGY_DATA (id, company, 500kWh, 1000kWh, 2000kWh, state, zip_code, contract, rating) values (23, 'Streich LLC', 0.06, 0.13, 0.22, 'TX', '78744', true, 3);
 insert into MOCK_ENERGY_DATA (id, company, 500kWh, 1000kWh, 2000kWh, state, zip_code, contract, rating) values (24, 'Kreiger-Mraz', 0.03, 0.18, 0.36, 'CA', '92862', true, 6);

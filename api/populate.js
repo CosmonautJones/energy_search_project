@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Plan = require('./PlanModel.js');
-const plans = require('./MOCK_DATA.json');
+const plans = require('./MOCK_ENERGY_DATA.sql');
 
 mongoose.Promise = global.Promise;
 

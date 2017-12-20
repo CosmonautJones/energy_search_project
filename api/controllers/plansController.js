@@ -1,4 +1,5 @@
-const Plan = require('../models/PlanModel.js');
+const sqlite = require('sqlite3');
+const knex = require('../configuration/db.js');
 
 const getPlans = (req, res) => {
   Plan.find({}, (err, plans) => {

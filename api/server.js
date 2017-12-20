@@ -1,17 +1,29 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-
-const postsEndpoints = require('./posts/postsEndpoints.js');
-const tagsEndpoints = require('./tags/tagsEndpoints.js');
-const usersEndpoints = require('./users/usersEndpoints.js');
+const sqlite = require('sqlite3');
+const cors = require('cors');
 
 const server = express();
 
+const corsOptions = {
+	"origin": "*",
+	"methods": "GET, HEAD, PUT, PATCH, POST, DELETE",
+	"preflightContinue": false,
+	"optionsSuccessStatus": 204
+};
+
+server.use(bodyParser.urlencoded({extended: true}));
 server.use(bodyParser.json());
 
-server.use('/api/posts', postsEndpoints);
-server.use('/api/tags', tagsEndpoints);
-server.use('/api/users', usersEndpoints);
+server.use(cors());
+server.use((req, res, next) => {
+	res.setHeader("Access-Control-Allow-Origin", "*");
+	res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+	next();
+});
+
+const routes = require('./routes/routes.js');
+routes(server);
 
 const port = 5000;
 
