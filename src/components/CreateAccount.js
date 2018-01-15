@@ -8,45 +8,46 @@ class CreateAccount extends Component {
   constructor(){
     super();
     this.state = {
-      username: '',
+      email: '',
       password: '',
     }
-    this.handleSetusername = this.handleSetusername.bind(this);
+    this.handleSetEmail = this.handleSetEmail.bind(this);
     this.handleSetPassword = this.handleSetPassword.bind(this);
     this.createUser = this.createUser.bind(this);
   }
-  handleSetusername(e) {
-    this.setState({username: e.target.value});
+  handleSetEmail(e) {
+    this.setState({email: e.target.value});
   }
   handleSetPassword(e) {
     this.setState({password: e.target.value});
   }
   createUser(e) {
     e.preventDefault();
-    const userToSave = {username: this.state.username, password: this.state.password};
+    const userToSave = {email: this.state.email, password: this.state.password};
     axios.post('http://localhost:5000/new-user', userToSave)
       .then((data) => {
-        localStorage.setItem('uuID', data.data._id);
+        //localStorage.setItem('uuID', data.data._id);
+        console.log(data);
         setTimeout(() => {
-          window.location = '/plans';
+          window.location = '/zipform';
         }, 200);
       })
       .catch((err) => {
-        console.log({'error': err.response.error});
+        console.log(err);
       });
   }
   render() {
     return (
       <form className="Login-form">
         <FormGroup className="Login-group" controlId="formHorizontalEmail">
-            User Name
+            Email
             <FormControl 
               id="formHorizontalEmail"
               className="form-control"
-              onChange={this.handleSetusername} 
-              placeholder="User Name"
+              onChange={this.handleSetEmail} 
+              placeholder="Email"
               type="text" 
-              value={this.state.username} 
+              value={this.state.email} 
             />
           
           </FormGroup>
@@ -56,7 +57,7 @@ class CreateAccount extends Component {
               id="formHorizontalPassword"
               className="form-control"
               onChange={this.handleSetPassword} 
-              placeholder="password"
+              placeholder="Password"
               type="password" 
               value={this.state.password} 
             />
