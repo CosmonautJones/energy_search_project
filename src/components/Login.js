@@ -29,7 +29,7 @@ export default class Login extends Component {
         console.log('user success', data)
         localStorage.setItem('uuID', data.data._id);
         setTimeout(() => {
-          window.location = '/';
+          window.location = '/plans';
         }); 
       })
       .catch((err) => {
