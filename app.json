@@ -1,0 +1,6 @@
+{
+  "name": "EnergySearchProject",
+  "description": "A Web App that accesses Power To Choose API to seach for energy plans and providers",
+  "respository": "https://github.com/CosmonautJones/energy_search_project.git",
+  "keywords": ["node", "express", "static"]
+}

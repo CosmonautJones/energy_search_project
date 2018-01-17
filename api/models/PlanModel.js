@@ -1,8 +1,5 @@
 const mongoose = require('mongoose');
 
-mongoose.models = {};
-mongoose.modelSchemas = {};
-
 mongoose.Promise = Promise;
 mongoose.connect('mongodb://localhost/plansData', { useMongoClient: true });
 
@@ -28,4 +25,4 @@ const PlanSchema = new mongoose.Schema({
   rating: Number,
 });
 
-module.exports = mongoose.model('Plans', PlanSchema);
+module.exports = mongoose.model('Plan', PlanSchema);

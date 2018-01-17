@@ -3,23 +3,18 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const CORS = require('cors');
 
-const Plan = require('./PlanModel.js');
-const User = require('./UserModel.js')
+const Plan = require('./models/PlanModel.js');
+const User = require('./models/UserModel.js')
 
 const server = express();
+
+const STATUS_SERVER_ERROR = 422;
 
 server.use(bodyParser.json());
 server.use(CORS());
 
-const corsOptions = {
-	"origin": "*",
-	"methods": "GET, HEAD, PUT, PATCH, POST, DELETE",
-	"preflightContinue": false,
-	"optionsSuccessStatus": 204
-};
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/energyPlanUsers', { useMongoClient: true });
 
 server.use(bodyParser.urlencoded({extended: true}));
 server.use(bodyParser.json());
@@ -105,17 +100,18 @@ const plans = [
 	}
 ];
 
-server.get('/plansData/', (req, res) => {
-	Plan.find({}, (err, plans) => {
-		if (err) {
-			res
-				.status(STATUS_SERVER_ERROR)
-				.json({ 'There was an error getting plans' :err });
-			return;
-		}
-		res.json(plans);
-	});
-});
+// server.get('/plansData', (req, res) => {
+// 	Plan.find({}, (err, plans) => {
+// 		if (err) {
+// 			res
+// 				.status(STATUS_SERVER_ERROR)
+// 				.json({ 'There was an error getting plans' :err });
+// 			return;
+// 		}
+// 		res.status(200).json(plans);
+// 		console.log('plansData have been found!')
+// 	});
+// });
 
 server.get('/plans', (req, res) => {
 	res.send(plans);
@@ -131,10 +127,12 @@ server.post('/new-plans', (req, res) => {
 	res.send(plans);
 });
 
+
+
 const routes = require('./routes/routes.js');
 routes(server);
 
-const port = process.env.PORT || 5000;
+const port = 5000;
 
 server.listen(port, () => {
 	console.log(`Server listening on port ${port}`);

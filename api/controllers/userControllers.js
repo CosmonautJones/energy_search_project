@@ -1,4 +1,16 @@
-const User = require('../userModel');
+const User = require('../models/UserModel.js');
+
+const getUsers = (req, res) => {
+  User.find({}, (err, users) => {
+    if(err) {
+      res.status(422);
+      res.json({ err: 'there was an error getting users information' });
+      return;
+    }
+    res.json(users);
+    console.log('got them USERS!')
+  });
+};
 
 const createUser = (req, res) => {
   const {username, password} = req.body;
@@ -30,4 +42,5 @@ const login = (req, res) => {
 module.exports = {
   createUser,
   login,
+  getUsers,
 };

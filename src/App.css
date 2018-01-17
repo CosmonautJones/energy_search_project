@@ -1,5 +1,5 @@
 .App {
-
+  display: block;
 }
 
 .App-logo {
@@ -11,6 +11,7 @@
   opacity: 0.9;
   background-color: rgb(67, 125, 164);
   height: 170px;
+  margin: 20px;
   padding: 20px;
   color: rgb(129, 232, 113);
 }
@@ -29,4 +30,8 @@
 .Button {
   background-color: rgb(67, 125, 164);
   
+}
+
+.ButtonLinks {
+  display: flex-column;
 }
