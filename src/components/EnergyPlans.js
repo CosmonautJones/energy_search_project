@@ -13,7 +13,7 @@ class EnergyPlans extends Component {
 	constructor() {
 		super();
 		this.state = {
-			companies: []
+			plans: []
 		};
 	}
 
@@ -30,8 +30,8 @@ class EnergyPlans extends Component {
       return response.json();
     })
     .then(data => {
-      this.setState({ companies: data.data });
-      console.log('state of Energy', this.state.companies);
+      this.setState({ plans: data.data });
+      console.log('state of Energy', this.state.plans);
     });
 	};
   
@@ -43,7 +43,7 @@ class EnergyPlans extends Component {
 		return (
 			<div className="container1">
 				<div className="container2"><p className ="PlanList">
-                    {this.state.companies.map((plan, i) => {
+                    {this.state.plans.map((plan, i) => {
                         return (
                             <Plan
                                 key={i} 
